@@ -10,14 +10,14 @@
 		}).addTo(map);
 
 //Pin Color Settings
-var geojsonMarkerOptions = {
-    radius: 4,
-    fillColor: "#ff7800",
-    color: "#000",
-    weight: 1,
-    opacity: 1,
-    fillOpacity: 0.8
-};
+    var geojsonMarkerOptions = {
+        radius: 4,
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
 
 //Add Popup Info
 function onEachFeature(feature, layer) {

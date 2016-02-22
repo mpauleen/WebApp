@@ -6,23 +6,24 @@ html, body {
  
 #map { width: 100%;
         min-height: 100%}
+#search_bar {
+    max-width: 100ch;
+    position: absolute;
+    top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 2;
+}
 
-.menu-ui {
-  background:#fff;
-  position:absolute;
-  top:10px;left:10px;
-  z-index:1;
-  border-radius:3px;
-  width:120px;
-  border:1px solid rgba(0,0,0,0.4);
-  }
-  .menu-ui a {
-    font-size:13px;
-    color:#404040;
-    display:block;
-    margin:0;padding:0;
-    padding:10px;
-    text-decoration:none;
-    border-bottom:1px solid rgba(0,0,0,0.25);
-    text-align:center;
-    }
+#share_row{
+    position: absolute;
+    bottom: 30px ;
+    right:0;
+    margin-right:30px;
+    right:0;
+    z-index: 2;
+}
