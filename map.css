@@ -4,10 +4,56 @@ html, body {
     padding: 0;
 }
  
+#filter_bar {
+    position: absolute;
+    bottom:0;
+    left:0;
+    top:0;
+    z-index: 3;
+    width: 25%;
+    background: white;
+}
+
+#data_bar {
+    position: absolute;
+    bottom:0;
+    right:0;
+    top:0;
+    z-index: 3;
+    width: 25%;
+    background: white;
+}
+
+#[type = "checkbox"] {
+    font-family: "Times New Roman", Times, serif;
+    color: blue;
+}
+
+#h4 {
+    font-family: "Times New Roman", Times, serif;
+    color: blue;
+    
+}
+
+#type_boxes {
+    margin-left: 20px;
+}
+
+#filter_content {
+    margin-left: 10px;
+    font-family: "Open Sans", sans-serif;
+    color: blue;
+}
+
+/*#center_section {
+    width: 100%;
+    margin-left: auto;
+}*/
+
 #map { width: 100%;
         min-height: 100%}
 #search_bar {
-    max-width: 100ch;
+    max-width: 70ch;
     position: absolute;
     top: 30px;
     padding-left: 10px;
