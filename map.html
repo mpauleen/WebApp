@@ -8,23 +8,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="sites.geojson"></script>
     <link rel="stylesheet" href="map.css"/>
 </head>
 <body>
-    <div id="search_bar">
-        <input type="text" class="form-control" />
+        <div id="search_bar">
+            <input type="text" class="form-control" />
+        </div>
+        <div id="share_row">
+            <button type="button" class="btn btn-default btn-lg share_btn">
+                <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
+            </button>        
+            
+            <button type="button" class="btn btn-default btn-lg share_btn">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+            </button>
+        </div>
+    	<div id="map"></div>
+
+    <div id="filter_bar">
+        <div id="filter_content">
+            <h4>Type</h4>
+            <div id="type_boxes">
+                <input type="checkbox" name="Burglary" value="bur"> Burglary<br>
+                <input type="checkbox" name="Sexual Abuse" value="sex"> Sexual Abuse<br>
+                <input type="checkbox" name="Assault" value="ass"> Assault<br>
+                <input type="checkbox" name="Theft" value="the"> Theft<br>
+                <input type="checkbox" name="Medical Services" value="med"> Medical Services<br>
+                <input type="checkbox" name="Drunkenness" value="dru"> Drunkenness<br>
+                <input type="checkbox" name="Other" value="oth"> Other<br>
+            </div>
+            <h4>Date and Time</h4>
+
+            <h4>Special Displays</h4>
+        </div>
     </div>
-    <div id="share_row">
-        <button type="button" class="btn btn-default btn-lg share_btn">
-            <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
-        </button>        
-        
-        <button type="button" class="btn btn-default btn-lg share_btn">
-            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-        </button>
+
+    <div id="data_bar">
+
     </div>
-	<div id="map"></div>
+
 </body>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="map.js"></script>
