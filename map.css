@@ -27,3 +27,18 @@ html, body {
     right:0;
     z-index: 2;
 }
+
+#external_buttons{
+    margin: 0 auto;
+    max-height: 60px;
+}
+
+#share_map{
+    margin: 0 auto;
+    max-height: 400px;
+}
+
+#permalink{
+    max-width: 600px;
+    margin: 10px auto;
+}
