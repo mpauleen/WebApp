@@ -4,6 +4,41 @@ html, body {
     padding: 0;
 }
  
+.panel-body {
+  padding-bottom: 0px;
+}
+ 
+.data-header {
+  font-size: 24px !important;
+  font-weight: bold;
+  background-color: #999999 !important;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: -4px;
+
+
+}
+
+.date{
+  margin-top: -5px;
+  font-style: italic;
+  background-color: #777 !important;
+  padding-left: 15px;
+  padding-top: .5px;
+  padding-bottom: .5px;
+
+
+}
+
+.crimetitle{
+  font-weight: bold;
+  font-size: 110%;
+}
+
+
 #filter_bar {
     position: absolute;
     bottom:0;
