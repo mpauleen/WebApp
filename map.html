@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet Quick Start Guide Example</title>
+	<title>Super Webapp 3.2</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
 
     <div id="filter_bar">
         <div id="filter_content">
-            <h4>Type</h4>
+            <h3>Type</h3>
             <div id="type_boxes">
                 <input type="checkbox" name="Burglary" value="bur"> Burglary<br>
                 <input type="checkbox" name="Sexual Abuse" value="sex"> Sexual Abuse<br>
@@ -39,9 +39,20 @@
                 <input type="checkbox" name="Drunkenness" value="dru"> Drunkenness<br>
                 <input type="checkbox" name="Other" value="oth"> Other<br>
             </div>
-            <h4>Date and Time</h4>
+            <h3>Date and Time</h3>
 
-            <h4>Special Displays</h4>
+            <div id="slider"></div>
+                <script src="jquery.js"></script>
+                <script src="jquery-ui.custom.js"></script>
+                <script src="jQDateRangeSlider-min.js"></script>
+                <script>
+                //<!--
+                  $("#slider").rangeSlider();
+                //-->
+                </script>
+            
+            <h3>Display Options</h3>
+
         </div>
     </div>
 
