@@ -1,25 +1,23 @@
+input, .input-group-addon {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0px auto;
     padding: 0;
 }
  
 #filter_bar {
-    position: absolute;
-    bottom:0;
-    left:0;
-    top:0;
-    z-index: 3;
+
     width: 25%;
     background: white;
+    float: left;
 }
 
 #data_bar {
-    position: absolute;
-    bottom:0;
-    right:0;
-    top:0;
-    z-index: 3;
     width: 25%;
     background: white;
 }
@@ -38,20 +36,31 @@ html, body {
 #type_boxes {
     margin-left: 20px;
 }
-
+#container:after { 
+    content: " "; 
+    display: block;
+} 
 #filter_content {
     margin-left: 10px;
     font-family: "Open Sans", sans-serif;
-    color: blue;
-}
+    color: blue;}
 
 /*#center_section {
     width: 100%;
     margin-left: auto;
 }*/
 
-#map { width: 100%;
+#map_wrapper {
+    min-width: 50%;
+    max-width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    float: left;
+}
+#map {  width: 100%;
         min-height: 100%}
+
 #search_bar {
     max-width: 70ch;
     position: absolute;
@@ -60,8 +69,8 @@ html, body {
     padding-right: 10px;
     left:0;
     right:0;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:auto !important;
+    margin-right:auto !important;
     z-index: 2;
 }
 
@@ -69,9 +78,13 @@ html, body {
     position: absolute;
     bottom: 30px ;
     right:0;
-    margin-right:30px;
+    margin-right:10px;
     right:0;
     z-index: 2;
+}
+
+#save-btn{
+    margin-top: 10px;
 }
 
 #external_buttons{
