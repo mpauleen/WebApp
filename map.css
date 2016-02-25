@@ -117,7 +117,10 @@ html, body {
   #h4 {
     font-family: "Times New Roman", Times, serif;
     color: blue;
-    
+      }
+
+#filter_boxes {
+    margin-left: 20px;
   }
 
   #type_boxes {
