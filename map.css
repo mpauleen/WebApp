@@ -18,8 +18,9 @@ html, body {
 .data-header {
   font-size: 24px !important;
   font-weight: bold;
-  background-color:  #777!important;
-}
+  
+/*  background-color:  #777!important;
+*/}
 
 .subtitle {
   font-size: 16px;
@@ -28,13 +29,24 @@ html, body {
 
 }
 
+.right-sidebar{
+  padding-left: 15px;
+  padding-top: 15px;
+
+}
+
+.crime-instance{
+  padding-top: 10px;
+
+}
+
 .date{
   margin-top: -5px;
   font-style: italic;
-  background-color: #999999 !important;
-  padding-left: 15px;
+/*  background-color: #999999 !important;*/
   padding-top: .5px;
   padding-bottom: .5px;
+  outline: none !important;
 
 
 }
@@ -42,6 +54,14 @@ html, body {
 .crimetitle{
   font-weight: bold;
   font-size: 110%;
+}
+
+.hline{
+  height: 2px;
+
+  padding-right: 5px;
+  width: 90%;
+  background: black !important;
 }
 
 
