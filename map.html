@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leaflet Quick Start Guide Example</title>
+	<title>Excellent Awesome Webapp</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +20,16 @@
 <body>
     <div id="filter_bar">
         <div id="filter_content">
+            <h2>Filters</h2>
             <h3>Type</h3>
             <div id="type_boxes">
-                <input type="checkbox" name="Burglary" value="bur"> Burglary<br>
-                <input type="checkbox" name="Sexual Abuse" value="sex"> Sexual Abuse<br>
-                <input type="checkbox" name="Assault" value="ass"> Assault<br>
-                <input type="checkbox" name="Theft" value="the"> Theft<br>
-                <input type="checkbox" name="Medical Services" value="med"> Medical Services<br>
-                <input type="checkbox" name="Drunkenness" value="dru"> Drunkenness<br>
-                <input type="checkbox" name="Other" value="oth"> Other<br>
+                <input type="checkbox" class="css-checkbox" id="t1" name="Burglary" value="bur"/><label for="t1" class="css-label"> Burglary</label><br>
+                <input type="checkbox" class="css-checkbox" id="t2" name="Sexual Abuse" value="sex"/><label for="t2" class="css-label"> Sexual Abuse</label><br>
+                <input type="checkbox" class="css-checkbox" id="t3" name="Assault" value="ass"/><label for="t3" class="css-label"> Assault</label><br>
+                <input type="checkbox" class="css-checkbox" id="t4" name="Theft" value="the"/><label for="t4" class="css-label"> Theft</label><br>
+                <input type="checkbox" class="css-checkbox" id="t5" name="Medical Services" value="med"/><label for="t5" class="css-label"> Medical Services</label><br>
+                <input type="checkbox" class="css-checkbox" id="t6" name="Drunkenness" value="dru"/><label for="t6" class="css-label"> Drunkenness</label><br>
+                <input type="checkbox" class="css-checkbox" id="t7" name="Other" value="oth"/><label for="t7" class="css-label"> Other</label><br>
             </div>
             <h3>Date and Time</h3>
 
@@ -42,6 +43,9 @@
                 //-->
                 </script>
             
+
+
+
             <h3>Display Options</h3>
 
         </div>
@@ -117,4 +121,6 @@
 </body>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="map.js"></script>
+
+
 </html>
