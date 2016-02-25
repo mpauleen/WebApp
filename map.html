@@ -2,42 +2,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Super Webapp 3.2</title>
+	<title>Excellent Awesome Webapp</title>
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    
+    
     <script type="text/javascript" src="sites.geojson"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="map.css"/>
 </head>
 <body>
-        <div id="search_bar">
-            <input type="text" class="form-control" />
-        </div>
-        <div id="share_row">
-            <button type="button" class="btn btn-default btn-lg share_btn">
-                <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
-            </button>        
-            
-            <button type="button" class="btn btn-default btn-lg share_btn">
-                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-            </button>
-        </div>
-    	<div id="map"></div>
-
     <div id="filter_bar">
         <div id="filter_content">
+            <h2>Filters</h2>
             <h3>Type</h3>
             <div id="type_boxes">
-                <input type="checkbox" name="Burglary" value="bur"> Burglary<br>
-                <input type="checkbox" name="Sexual Abuse" value="sex"> Sexual Abuse<br>
-                <input type="checkbox" name="Assault" value="ass"> Assault<br>
-                <input type="checkbox" name="Theft" value="the"> Theft<br>
-                <input type="checkbox" name="Medical Services" value="med"> Medical Services<br>
-                <input type="checkbox" name="Drunkenness" value="dru"> Drunkenness<br>
-                <input type="checkbox" name="Other" value="oth"> Other<br>
+                <input type="checkbox" class="css-checkbox" id="t1" name="Burglary" value="bur"/><label for="t1" class="css-label"> Burglary</label><br>
+                <input type="checkbox" class="css-checkbox" id="t2" name="Sexual Abuse" value="sex"/><label for="t2" class="css-label"> Sexual Abuse</label><br>
+                <input type="checkbox" class="css-checkbox" id="t3" name="Assault" value="ass"/><label for="t3" class="css-label"> Assault</label><br>
+                <input type="checkbox" class="css-checkbox" id="t4" name="Theft" value="the"/><label for="t4" class="css-label"> Theft</label><br>
+                <input type="checkbox" class="css-checkbox" id="t5" name="Medical Services" value="med"/><label for="t5" class="css-label"> Medical Services</label><br>
+                <input type="checkbox" class="css-checkbox" id="t6" name="Drunkenness" value="dru"/><label for="t6" class="css-label"> Drunkenness</label><br>
+                <input type="checkbox" class="css-checkbox" id="t7" name="Other" value="oth"/><label for="t7" class="css-label"> Other</label><br>
             </div>
             <h3>Date and Time</h3>
 
@@ -51,12 +43,15 @@
                 //-->
                 </script>
             
+
+
+
             <h3>Display Options</h3>
 
         </div>
     </div>
-
     <div id="data_bar">
+
 
         <div class="panel panel-default">
           <!-- Default panel contents -->
@@ -87,8 +82,74 @@
     </div>
 
     </div>
+    <div id="map_wrapper">
+	<div id="map">
+        <div id="search_bar" class="input-group">
+            <span class="input-group-addon glyphicon glyphicon-search"></span>
+            <input type="text" class="form-control glyphicon"/>
+        </div>
+        <div id="share_row">
+        <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#shareModal" id="share">
+            <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
+        </button>        
+        
+        <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#downloadModal" id="download">
+            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+        </button>
+    </div>
+    </div>
+    </div>
+
+    
+    <!--Popup Windows for Sharing-->
+    <div class="modal fade" id="shareModal" role="dialog">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Share</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_sharing_toolbox"></div>
+                <img id="share_map" src="ShareMap.png" class="img-responsive">
+                <div class="input-group" id="permalink" >
+                  <span class="input-group-addon">Permalink</span>
+                  <input type="text" class="form-control" aria-describedby="permalink" value="https://WebApp.com/s3W4kj2L" readonly >
+                </div>
+                <img id="external_buttons" src="ShareButtons.png" class="img-responsive">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        <div class="modal fade" id="downloadModal" role="dialog">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Save</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_sharing_toolbox"></div>
+                <img id="share_map" src="ShareMap.png" class="img-responsive">
+                <a href="ShareMap.png" download="map.png"><button class="btn btn-primary btn-lg btn-block" id="save-btn">Download Image</button></a>
+ 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </body>
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="map.js"></script>
+
+
 </html>
