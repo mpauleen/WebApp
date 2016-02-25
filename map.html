@@ -7,7 +7,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     
     
@@ -20,14 +20,29 @@
 <body>
     <div id="filter_bar">
 
+        <div id="banner">
+            <div id="banner_text">
+                <div class="filter-header">
+                    NU Crime View
+                    <div class = "subtitle">by EECS 330 Team qwerty</div>
+                </div>
+
+                <div class = "date"> <h6>See police activity in your area</h6> </div>
+            </div>
+            <div id="banner_logo">
+                <img src="pin.png" alt="NU Crime" style="width:40px;height:60px;">
+            </div>
+            <div class = "hline"> </div>
+        </div>
+
         <div id="filter_content">
 
-            <h3>Type</h3>
+            <!-- <h3>Type</h3> -->
             <div id="filter_lines">
                 <input type="checkbox" class="css-checkbox" id="f0" name="See All" value="all"/><label for="f0" class="css-label"> See All</label><br>
             </div>  
             <div id="filter_boxes">
-                    <input type="checkbox" class="css-checkbox" id="f1" name="Dangerous Crime" value="dan"/><label for="f1" class="css-label"> Dangerous Crime</label><br>
+                <input type="checkbox" class="css-checkbox" id="f1" name="Dangerous Crime" value="dan"/><label for="f1" class="css-label"> Dangerous Crime</label><br>
                 <div id="type_boxes">
                     <input type="checkbox" class="css-checkbox" id="t1" name="Burglary" value="bur"/><label for="t1" class="css-label"> Burglary</label><br>
                     <input type="checkbox" class="css-checkbox" id="t2" name="Sexual Abuse" value="sex"/><label for="t2" class="css-label"> Sexual Abuse</label><br>
@@ -36,7 +51,7 @@
                         <input type="checkbox" class="css-checkbox" id="t4" name="Theft" value="the"/><label for="t4" class="css-label"> Theft</label><br>
                     </div>
                 </div>
-                    <input type="checkbox" class="css-checkbox" id="f2" name="Dangerous Crime" value="dan"/><label for="f2" class="css-label"> College Fun</label><br>
+                <input type="checkbox" class="css-checkbox" id="f2" name="Dangerous Crime" value="dan"/><label for="f2" class="css-label"> College Fun</label><br>
                 <div id="type_boxes">
                     <input type="checkbox" class="css-checkbox" id="t5" name="Medical Services" value="med"/><label for="t5" class="css-label"> Medical Services</label><br>
                     <input type="checkbox" class="css-checkbox" id="t6" name="Drunkenness" value="dru"/><label for="t6" class="css-label"> Drunkenness</label><br>
@@ -53,145 +68,145 @@
               <input value="2014" min="2014" max="2016" step="1" type="range">
           </section>  
 
-            <h5>Month</h5>
+<!--           <h5>Month</h5>
 
-            <section class="range-slider">
+          <section class="range-slider">
               <span class="rangeValues"></span>
               <input value="1" min="1" max="12" step="1" type="range">
               <input value="12" min="1" max="12" step="1" type="range">
-            </section>  
+          </section>  
 
-            <h5>Day</h5>
+          <h5>Day</h5>
 
-            <section class="range-slider">
+          <section class="range-slider">
               <span class="rangeValues"></span>
               <input value="1" min="1" max="31" step="1" type="range">
               <input value="31" min="1" max="31" step="1" type="range">
-            </section>  
+          </section>   -->
 
-            <h5>Time</h5>
+          <h5>Time</h5>
 
-            <section class="range-slider">
+          <section class="range-slider">
               <span class="rangeValues"></span>
               <input value="0000" min="0000" max="2400" step="100" type="range">
               <input value="2400" min="0000" max="2400" step="100" type="range">
-            </section>             
+          </section>             
 
-            <h3>Display Options</h3>
+          <h3>Display Options</h3>
 
-            <input type="radio" name="display" value="pins"> See individual locations<br>
-            <input type="radio" name="display" value="heatmap"> See incident density<br>
+          <input type="radio" name="display" value="pins" checked> See individual locations<br>
+          <input type="radio" name="display" value="heatmap"> See incident density<br>
 
-        </div>
+      </div>
+  </div>
+  <div id="data_bar" class = "right-sidebar">
+
+
+    <div>
+      <!-- Default panel contents -->
+      <div class="data-header">
+        23 Results
+        <div class = "subtitle">for Theft in Bobb/McCulloch Hall</div>
     </div>
-    <div id="data_bar" class = "right-sidebar">
+
+    <div class = "date"> <h6>September 2013 - Today</h6> </div>
 
 
-        <div>
-          <!-- Default panel contents -->
-          <div class="data-header">
-            23 Results
-            <div class = "subtitle">for Theft in Bobb/McCulloch Hall</div>
-        </div>
-
-        <div class = "date"> <h6>September 2013 - Today</h6> </div>
-
-
-        <!-- List group -->
-        <div class="list-group">
-            <div class = "hline"> </div>
-            <div class="crime-instance">
-                <div class = "crimetitle">
+    <!-- List group -->
+    <div class="list-group">
+        <div class = "hline"> </div>
+        <div class="crime-instance">
+            <div class = "crimetitle">
                 December 04, 2015 at 12:00 PM
-                </div>
-                <div> 
+            </div>
+            <div> 
                 Larceny - theft <br>
                 Theft $500 and Under
-                </div>
             </div>
+        </div>
 
-            <div class="crime-instance">
-                <div class = "crimetitle">
+        <div class="crime-instance">
+            <div class = "crimetitle">
                 December 04, 2015 at 12:00 PM
-                </div>
-                <div> 
+            </div>
+            <div> 
                 Larceny - theft <br>
                 Theft $500 and Under
-                </div>
             </div>
-            
         </div>
-    </div>
 
     </div>
-    <div id="map_wrapper">
+</div>
+
+</div>
+<div id="map_wrapper">
 	<div id="map">
         <div id="search_bar" class="input-group">
             <span class="input-group-addon glyphicon glyphicon-search"></span>
             <input type="text" class="form-control glyphicon"/>
         </div>
         <div id="share_row">
-        <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#shareModal" id="share">
-            <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
-        </button>        
-        
-        <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#downloadModal" id="download">
-            <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
-        </button>
-    </div>
-    </div>
-    </div>
+            <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#shareModal" id="share">
+                <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share
+            </button>        
 
-    
-    <!--Popup Windows for Sharing-->
-    <div class="modal fade" id="shareModal" role="dialog">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Share</h4>
-            </div>
-            <div class="modal-body">
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_sharing_toolbox"></div>
-                <img id="share_map" src="ShareMap.png" class="img-responsive">
-                <div class="input-group" id="permalink" >
-                  <span class="input-group-addon">Permalink</span>
-                  <input type="text" class="form-control" aria-describedby="permalink" value="https://WebApp.com/s3W4kj2L" readonly >
-                </div>
-                <img id="external_buttons" src="ShareButtons.png" class="img-responsive">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
+            <button type="button" class="btn btn-default btn-lg share_btn" data-toggle="modal" data-target="#downloadModal" id="download">
+                <span class="glyphicon glyphicon-download" aria-hidden="true"></span> Download
+            </button>
         </div>
+    </div>
+</div>
+
+
+<!--Popup Windows for Sharing-->
+<div class="modal fade" id="shareModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Share</h4>
       </div>
-    
-        <div class="modal fade" id="downloadModal" role="dialog">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Save</h4>
-            </div>
-            <div class="modal-body">
-                <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                <div class="addthis_sharing_toolbox"></div>
-                <img id="share_map" src="ShareMap.png" class="img-responsive">
-                <a href="ShareMap.png" download="map.png"><button class="btn btn-primary btn-lg btn-block" id="save-btn">Download Image</button></a>
- 
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
+      <div class="modal-body">
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_sharing_toolbox"></div>
+        <img id="share_map" src="ShareMap.png" class="img-responsive">
+        <div class="input-group" id="permalink" >
+          <span class="input-group-addon">Permalink</span>
+          <input type="text" class="form-control" aria-describedby="permalink" value="https://WebApp.com/s3W4kj2L" readonly >
       </div>
+      <img id="external_buttons" src="ShareButtons.png" class="img-responsive">
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="downloadModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Save</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_sharing_toolbox"></div>
+        <img id="share_map" src="ShareMap.png" class="img-responsive">
+        <a href="ShareMap.png" download="map.png"><button class="btn btn-primary btn-lg btn-block" id="save-btn">Download Image</button></a>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
 
 </body>
-    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-    <script type="text/javascript" src="map.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script type="text/javascript" src="map.js"></script>
 
 
 </html>

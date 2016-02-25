@@ -10,11 +10,11 @@ html, body {
   padding: 0;
 }
 
- 
+
 .panel-body {
   padding-bottom: 0px;
 }
- 
+
 .data-header {
   font-size: 24px !important;
   font-weight: bold;
@@ -43,12 +43,10 @@ html, body {
 .date{
   margin-top: -5px;
   font-style: italic;
-/*  background-color: #999999 !important;*/
+  /*  background-color: #999999 !important;*/
   padding-top: .5px;
   padding-bottom: .5px;
   outline: none !important;
-
-
 }
 
 .crimetitle{
@@ -58,14 +56,21 @@ html, body {
 
 .hline{
   height: 2px;
-
   padding-right: 5px;
   width: 90%;
   background: black !important;
 }
 
 
+.filter-header {
+  font-size: 24px !important;
+  font-weight: bold;
+}
+  
+
 #filter_bar {
+  padding-left: 15px;
+  padding-top: 15px;
   width: 25%;
   max-width: 300px;
   height: 100%;
@@ -73,6 +78,17 @@ html, body {
   float: left;
   /*border-color: #47ABE4; */
   border-right: orange solid;
+}
+
+#banner_text{
+  /*float: left;*/
+}
+
+#banner_logo {
+  float: right;
+  position: relative;
+  top: -73px;
+  left: -26px;
 }
 
 #data_bar {
@@ -84,143 +100,132 @@ html, body {
   border-left: orange solid;
 }
 
-/*.my_checkbox {
-  -webkit-appearance: none;
-  background-color: #fafafa;
-  border: 1px solid #cacece;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-  padding: 9px;
-  border-radius: 0px;
-  display: inline-block;
-  position: relative;
-  }*/
-
 #filter_lines{
   height:35px;
 }
 
-  input[type=checkbox].css-checkbox {
-    position:absolute; 
-    z-index:-1000; 
-    left:-1000px; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height:1px; 
-    width:1px; 
-    margin:-1px; 
-    padding:0; 
-    border:0;
-  }
+input[type=checkbox].css-checkbox {
+  position:absolute; 
+  z-index:-1000; 
+  left:-1000px; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height:1px; 
+  width:1px; 
+  margin:-1px; 
+  padding:0; 
+  border:0;
+}
 
-  input[type=checkbox].css-checkbox + label.css-label {
-    padding-left:29px;
-    height:24px; 
-    display:inline-block;
-    line-height:24px;
-    background-repeat:no-repeat;
-    background-position: 0 0;
-    font-size:15px;
-    vertical-align:middle;
-    cursor:pointer;
-  }
+input[type=checkbox].css-checkbox + label.css-label {
+  padding-left:29px;
+  height:24px; 
+  display:inline-block;
+  line-height:24px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  font-size:15px;
+  vertical-align:middle;
+  cursor:pointer;
+}
 
-  input[type=checkbox].css-checkbox:checked + label.css-label {
-    background-position: 0 -24px;
-  }
+input[type=checkbox].css-checkbox:checked + label.css-label {
+  background-position: 0 -24px;
+}
 
-  label.css-label {
-    background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_386dc4744b6563661b3277496a81bd37.png);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+input[type="radio"] {
+    background-color:orange;
+}
 
-  #h4 {
-    font-family: "Times New Roman", Times, serif;
-    color: blue;
-      }
+
+label.css-label {
+  background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_386dc4744b6563661b3277496a81bd37.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 #filter_boxes {
-    margin-left: 20px;
-  }
+  margin-left: 24px;
+}
 
-  #type_boxes {
-    margin-left: 20px;
-  }
-  #container:after { 
-    content: " "; 
-    display: block;
-  } 
-  #filter_content {
-    margin-left: 10px;
-    font-family: "Open Sans", sans-serif;
-    color: black;}
+#type_boxes {
+  margin-left: 24px;
+}
+#container:after { 
+  content: " "; 
+  display: block;
+}
 
-/*#center_section {
-    width: 100%;
-    margin-left: auto;
-    }*/
+#filter_content {
+  /*margin-left: 10px;*/
+  padding-top: 10px;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+}
 
-    #map_wrapper {
-      min-width: 50%;
-      max-width: 90%;
-      height: 100%;
-      margin: 0 auto;
-      overflow: hidden;
-    }
-    #map {  width: 100%;
-      min-height: 100%}
+#map_wrapper {
+  min-width: 50%;
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-      #search_bar {
-        max-width: 70ch;
-        position: absolute;
-        top: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
-        left:0;
-        right:0;
-        margin-left:auto !important;
-        margin-right:auto !important;
-        z-index: 2;
-      }
+#map {  width: 100%;
+  min-height: 100%
+}
 
-      #share_row{
-        position: absolute;
-        bottom: 30px ;
-        right:0;
-        margin-right:10px;
-        right:0;
-        z-index: 2;
-      }
+#search_bar {
+  max-width: 70ch;
+  position: absolute;
+  top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  left:0;
+  right:0;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  z-index: 2;
+}
 
-      #save-btn{
-        margin-top: 10px;
-      }
+#share_row{
+  position: absolute;
+  bottom: 30px ;
+  right:0;
+  margin-right:10px;
+  right:0;
+  z-index: 2;
+}
 
-      #external_buttons{
-        margin: 0 auto;
-        max-height: 60px;
-      }
+#save-btn{
+  margin-top: 10px;
+}
 
-      #share_map{
-        margin: 0 auto;
-        max-height: 400px;
-      }
+#external_buttons{
+  margin: 0 auto;
+  max-height: 60px;
+}
 
-      #permalink{
-        max-width: 600px;
-        margin: 10px auto;
-      }
+#share_map{
+  margin: 0 auto;
+  max-height: 400px;
+}
 
-
+#permalink{
+  max-width: 600px;
+  margin: 10px auto;
+}
 
 
 
 
-  
+
+
+
 /*I've been looking for a lightweight, dependency free dual slider for some time (it seemed crazy to import jQuery just for this) and there don't seem to be many out there. I ended up modifying @Wildhoney's code a bit and really like it.*/
 
 /*Hide code snippet*/
@@ -229,76 +234,76 @@ function getVals(){
   // Get slider values
   var parent = this.parentNode;
   var slides = parent.getElementsByTagName("input");
-    var slide1 = parseFloat( slides[0].value );
-    var slide2 = parseFloat( slides[1].value );
+  var slide1 = parseFloat( slides[0].value );
+  var slide2 = parseFloat( slides[1].value );
   // Neither slider will clip the other, so make sure we determine which is larger
   if( slide1 > slide2 ){ var tmp = slide2; slide2 = slide1; slide1 = tmp; }
-  
+
   var displayElement = parent.getElementsByClassName("rangeValues")[0];
-      displayElement.innerHTML = slide1 + " - " + slide2;
+  displayElement.innerHTML = slide1 + " - " + slide2;
 }
 
 window.onload = function(){
   // Initialize Sliders
   var sliderSections = document.getElementsByClassName("range-slider");
-      for( var x = 0; x < sliderSections.length; x++ ){
-        var sliders = sliderSections[x].getElementsByTagName("input");
-        for( var y = 0; y < sliders.length; y++ ){
-          if( sliders[y].type ==="range" ){
-            sliders[y].oninput = getVals;
-            // Manually trigger event first time to display values
-            sliders[y].oninput();
-          }
-        }
+  for( var x = 0; x < sliderSections.length; x++ ){
+    var sliders = sliderSections[x].getElementsByTagName("input");
+    for( var y = 0; y < sliders.length; y++ ){
+      if( sliders[y].type ==="range" ){
+        sliders[y].oninput = getVals;
+        // Manually trigger event first time to display values
+        sliders[y].oninput();
       }
+    }
+  }
 }
-  section.range-slider {
-    position: relative;
-    width: 200px;
-    height: 35px;
-    text-align: center;
+section.range-slider {
+  position: relative;
+  width: 200px;
+  height: 35px;
+  text-align: center;
 }
 
 section.range-slider input {
-    pointer-events: none;
-    position: absolute;
-    overflow: hidden;
-    left: 0;
-    top: 15px;
-    width: 200px;
-    outline: none;
-    height: 18px;
-    margin: 0;
-    padding: 0;
+  pointer-events: none;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 15px;
+  width: 200px;
+  outline: none;
+  height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 section.range-slider input::-webkit-slider-thumb {
-    pointer-events: all;
-    position: relative;
-    z-index: 1;
-    outline: 0;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  outline: 0;
 }
 
 section.range-slider input::-moz-range-thumb {
-    pointer-events: all;
-    position: relative;
-    z-index: 10;
-    -moz-appearance: none;
-    width: 9px;
+  pointer-events: all;
+  position: relative;
+  z-index: 10;
+  -moz-appearance: none;
+  width: 9px;
 }
 
 section.range-slider input::-moz-range-track {
-    position: relative;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, 1);
-    background-color: blue;
-    border: 0;
+  position: relative;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 1);
+  background-color: blue;
+  border: 0;
 }
 section.range-slider input:last-of-type::-moz-range-track {
-    -moz-appearance: none;
-    background: none transparent;
-    border: 0;
+  -moz-appearance: none;
+  background: none transparent;
+  border: 0;
 }
-  section.range-slider input[type=range]::-moz-focus-outer {
+section.range-slider input[type=range]::-moz-focus-outer {
   border: 0;
 }
