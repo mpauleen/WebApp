@@ -1,5 +1,6 @@
 
-    var map = L.map('map',{zoomControl:false}).setView([42.056, -87.678], 15);
+var dataBar = document.getElementById("data_bar")    
+var map = L.map('map',{zoomControl:false}).setView([42.056, -87.678], 15);
 
 	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
 			maxZoom: 18,
@@ -23,18 +24,30 @@
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.popupContent) {
-        layer.bindPopup(feature.properties.popupContent);
+        var str = ""
+        for(var item in feature.properties.popupContent){
+            str += item+": "+feature.properties.popupContent[item]+"<br>";
+        }
+        
+        layer.bindPopup(str);
+
     }
 }
 
+    
     L.geoJson(sites,
         {
             pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, geojsonMarkerOptions);
+                var marker = L.circleMarker(latlng, geojsonMarkerOptions);
+                marker.on('click', function(){
+                    dataBar.innerHTML = marker._popup.getContent();
+                })
+            return marker;
+                          
+;
         },
         onEachFeature: onEachFeature
     }).addTo(map);
-
     function getVals(){
   // Get slider values
   var parent = this.parentNode;
