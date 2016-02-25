@@ -9,7 +9,7 @@ html, body {
   margin: 0px auto;
   padding: 0;
 }
-<<<<<<< HEAD
+
  
 .panel-body {
   padding-bottom: 0px;
@@ -18,7 +18,7 @@ html, body {
 .data-header {
   font-size: 24px !important;
   font-weight: bold;
-  background-color: #999999 !important;
+  background-color:  #777!important;
 }
 
 .subtitle {
@@ -26,13 +26,12 @@ html, body {
   font-weight: normal;
   margin-top: -4px;
 
-
 }
 
 .date{
   margin-top: -5px;
   font-style: italic;
-  background-color: #777 !important;
+  background-color: #999999 !important;
   padding-left: 15px;
   padding-top: .5px;
   padding-bottom: .5px;
@@ -45,8 +44,6 @@ html, body {
   font-size: 110%;
 }
 
-=======
->>>>>>> origin/master
 
 #filter_bar {
   width: 25%;
