@@ -21,16 +21,20 @@
     <div id="filter_bar">
         <div id="filter_content">
             <h3>Type</h3>
-            <input type="checkbox" class="css-checkbox" id="f0" name="See All" value="all"/><label for="f0" class="css-label"> See All</label><br>
+            <div id="filter_lines">
+                <input type="checkbox" class="css-checkbox" id="f0" name="See All" value="all"/><label for="f0" class="css-label"> See All</label><br>
+            </div>  
             <div id="filter_boxes">
-                <input type="checkbox" class="css-checkbox" id="f1" name="Dangerous Crime" value="dan"/><label for="f1" class="css-label"> Dangerous Crime</label><br>
+                    <input type="checkbox" class="css-checkbox" id="f1" name="Dangerous Crime" value="dan"/><label for="f1" class="css-label"> Dangerous Crime</label><br>
                 <div id="type_boxes">
                     <input type="checkbox" class="css-checkbox" id="t1" name="Burglary" value="bur"/><label for="t1" class="css-label"> Burglary</label><br>
                     <input type="checkbox" class="css-checkbox" id="t2" name="Sexual Abuse" value="sex"/><label for="t2" class="css-label"> Sexual Abuse</label><br>
                     <input type="checkbox" class="css-checkbox" id="t3" name="Assault" value="ass"/><label for="t3" class="css-label"> Assault</label><br>
-                    <input type="checkbox" class="css-checkbox" id="t4" name="Theft" value="the"/><label for="t4" class="css-label"> Theft</label><br>
+                    <div id="filter_lines">
+                        <input type="checkbox" class="css-checkbox" id="t4" name="Theft" value="the"/><label for="t4" class="css-label"> Theft</label><br>
+                    </div>
                 </div>
-                <input type="checkbox" class="css-checkbox" id="f2" name="Dangerous Crime" value="dan"/><label for="f2" class="css-label"> College Fun</label><br>
+                    <input type="checkbox" class="css-checkbox" id="f2" name="Dangerous Crime" value="dan"/><label for="f2" class="css-label"> College Fun</label><br>
                 <div id="type_boxes">
                     <input type="checkbox" class="css-checkbox" id="t5" name="Medical Services" value="med"/><label for="t5" class="css-label"> Medical Services</label><br>
                     <input type="checkbox" class="css-checkbox" id="t6" name="Drunkenness" value="dru"/><label for="t6" class="css-label"> Drunkenness</label><br>
@@ -39,24 +43,43 @@
             </div>
             <h3>Date and Time</h3>
 
+            <h5>Year</h5>
+
             <section class="range-slider">
-  <span class="rangeValues"></span>
-  <input value="5" min="0" max="15" step="0.5" type="range">
-  <input value="10" min="0" max="15" step="0.5" type="range">
-</section>  
+              <span class="rangeValues"></span>
+              <input value="2015" min="2010" max="2016" step="1" type="range">
+              <input value="2014" min="2010" max="2016" step="1" type="range">
+          </section>  
 
-           <!--  <div id="slider"></div>
-                <script src="jquery.js"></script>
-                <script src="jquery-ui.custom.js"></script>
-                <script src="jQDateRangeSlider-min.js"></script>
-                <script>
-                //
-                  $("#slider").rangeSlider();
-                //
-                </script>
-             -->
+            <h5>Month</h5>
 
+            <section class="range-slider">
+              <span class="rangeValues"></span>
+              <input value="1" min="1" max="12" step="1" type="range">
+              <input value="12" min="1" max="12" step="1" type="range">
+            </section>  
 
+            <h5>Day</h5>
+
+            <section class="range-slider">
+              <span class="rangeValues"></span>
+              <input value="1" min="1" max="31" step="1" type="range">
+              <input value="31" min="1" max="31" step="1" type="range">
+            </section>  
+
+            <h5>Time</h5>
+
+            <section class="range-slider">
+              <span class="rangeValues"></span>
+              <input value="0000" min="0000" max="2400" step="100" type="range">
+              <input value="2400" min="0000" max="2400" step="100" type="range">
+            </section>             
+
+<!--             <section class="range-slider">
+              <span class="rangeValues"></span>
+              <input value="2015.0" min="2010.0" max="2016.0" step=".1" type="range">
+              <input value="2014.0" min="2010.0" max="2016.0" step=".1" type="range">
+          </section>  --> 
 
             <h3>Display Options</h3>
 
