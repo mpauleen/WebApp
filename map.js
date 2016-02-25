@@ -40,11 +40,27 @@ function onEachFeature(feature, layer) {
             pointToLayer: function (feature, latlng) {
                 var marker = L.circleMarker(latlng, geojsonMarkerOptions);
                 marker.on('click', function(){
-                    dataBar.innerHTML = marker._popup.getContent();
+                    console.log(marker);
+                    dataBar.innerHTML = "";
+                    var details = marker.feature.properties.details;
+                    for(incident in details){
+                     $("#data_bar").append(
+                         
+                         '<div class="list-group"> \
+            <div class = "hline"> </div> \
+            <div class="crime-instance"> \
+                <div class = "crimetitle">'
+                +details[incident].date+
+                '</div> \
+                <div>'
+                +details[incident].type+" - <br>"+ details[incident].offense+
+                '</div>\
+            </div>'
+                )
+                    }
                 })
             return marker;
-                          
-;
+                        
         },
         onEachFeature: onEachFeature
     }).addTo(map);
