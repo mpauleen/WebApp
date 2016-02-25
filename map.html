@@ -19,7 +19,9 @@
 </head>
 <body>
     <div id="filter_bar">
+
         <div id="filter_content">
+
             <h3>Type</h3>
             <div id="filter_lines">
                 <input type="checkbox" class="css-checkbox" id="f0" name="See All" value="all"/><label for="f0" class="css-label"> See All</label><br>
@@ -47,8 +49,8 @@
 
             <section class="range-slider">
               <span class="rangeValues"></span>
-              <input value="2015" min="2010" max="2016" step="1" type="range">
-              <input value="2014" min="2010" max="2016" step="1" type="range">
+              <input value="2016" min="2014" max="2016" step="1" type="range">
+              <input value="2014" min="2014" max="2016" step="1" type="range">
           </section>  
 
             <h5>Month</h5>
@@ -75,13 +77,10 @@
               <input value="2400" min="0000" max="2400" step="100" type="range">
             </section>             
 
-<!--             <section class="range-slider">
-              <span class="rangeValues"></span>
-              <input value="2015.0" min="2010.0" max="2016.0" step=".1" type="range">
-              <input value="2014.0" min="2010.0" max="2016.0" step=".1" type="range">
-          </section>  --> 
-
             <h3>Display Options</h3>
+
+            <input type="radio" name="display" value="pins"> See individual locations<br>
+            <input type="radio" name="display" value="heatmap"> See incident density<br>
 
         </div>
     </div>
