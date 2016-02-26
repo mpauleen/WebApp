@@ -43,9 +43,15 @@ function onEachFeature(feature, layer) {
                     console.log(marker);
                     dataBar.innerHTML = "";
                     var details = marker.feature.properties.details;
+                    $("#data_bar").append(' \
+                                <div> \
+          <!-- Default panel contents --> \
+          <div class="data-header"> \
+            '+details.length +' Results \
+            <div class = "subtitle">'+marker.feature.properties.location+'</div> \
+        </div> ')
                     for(incident in details){
                      $("#data_bar").append(
-                         
                          '<div class="list-group"> \
             <div class = "hline"> </div> \
             <div class="crime-instance"> \
