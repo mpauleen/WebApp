@@ -40,17 +40,20 @@ function onEachFeature(feature, layer) {
             pointToLayer: function (feature, latlng) {
                 var marker = L.circleMarker(latlng, geojsonMarkerOptions);
                 marker.on('click', function(){
+                    
+                    incident_count = 0;
                     console.log(marker);
                     dataBar.innerHTML = "";
                     var details = marker.feature.properties.details;
                     $("#data_bar").append(' \
                                 <div> \
           <!-- Default panel contents --> \
-          <div class="data-header"> \
-            '+details.length +' Results \
+          <div class= "data-header"> \
+            <div id="data-header">'+details.length +' Results </div>\
             <div class = "subtitle">'+marker.feature.properties.location+'</div> \
         </div> ')
                     for(incident in details){
+                        incident_count++;
                      $("#data_bar").append(
                          '<div class="list-group"> \
             <div class = "hline"> </div> \
@@ -64,6 +67,9 @@ function onEachFeature(feature, layer) {
             </div>'
                 )
                     }
+                    
+                    
+                $("#data-header").text(incident_count+" Results");
                 })
             return marker;
                         
