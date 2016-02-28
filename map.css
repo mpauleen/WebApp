@@ -18,7 +18,7 @@ html, body {
 .data-header {
   font-size: 24px !important;
   font-weight: bold;
-  
+
 /*  background-color:  #777!important;
 */}
 
@@ -32,7 +32,6 @@ html, body {
 .right-sidebar{
   padding-left: 15px;
   padding-top: 15px;
-
 }
 
 .crime-instance{
@@ -66,9 +65,10 @@ html, body {
   font-size: 24px !important;
   font-weight: bold;
 }
-  
+
 
 #filter_bar {
+  height: 100%;
   padding-left: 15px;
   padding-top: 15px;
   width: 25%;
@@ -77,6 +77,7 @@ html, body {
   overflow: scroll;
   background: white;
   float: left;
+  margin-bottom: -5px;
   /*border-color: #47ABE4; */
   border-right: orange solid;
 }
@@ -108,21 +109,21 @@ html, body {
 }
 
 input[type=checkbox].css-checkbox {
-  position:absolute; 
-  z-index:-1000; 
-  left:-1000px; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height:1px; 
-  width:1px; 
-  margin:-1px; 
-  padding:0; 
+  position:absolute;
+  z-index:-1000;
+  left:-1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height:1px;
+  width:1px;
+  margin:-1px;
+  padding:0;
   border:0;
 }
 
 input[type=checkbox].css-checkbox + label.css-label {
   padding-left:29px;
-  height:24px; 
+  height:24px;
   display:inline-block;
   line-height:24px;
   background-repeat:no-repeat;
@@ -158,8 +159,8 @@ label.css-label {
 #type_boxes {
   margin-left: 24px;
 }
-#container:after { 
-  content: " "; 
+#container:after {
+  content: " ";
   display: block;
 }
 
