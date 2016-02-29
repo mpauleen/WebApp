@@ -10,6 +10,7 @@ We've made some refinements to our tasks from P3:
 Notes:
 -Implemented for Chrome Browser
 -Implemented with full-screen window size
--Used checkboxes from 
+-Used checkboxes resources from csscheckbox.com
+
 
 
