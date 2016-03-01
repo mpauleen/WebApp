@@ -12,7 +12,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=p
 
 //Pin Color Settings
 var geojsonMarkerOptions = {
-	radius: 4,
+	radius: 5,
 	fillColor: "#ff7800",
 	color: "#000",
 	weight: 1,
@@ -23,13 +23,9 @@ var geojsonMarkerOptions = {
 //Add Popup Info
 function onEachFeature(feature, layer) {
 	// does this feature have a property named popupContent?
-	if (feature.properties && feature.properties.popupContent) {
-		var str = ""
-		for(var item in feature.properties.popupContent){
-			str += item+": "+feature.properties.popupContent[item]+"<br>";
-		}
-
-		layer.bindPopup(str);
+	if (feature.properties && feature.properties.location) {
+		var str = feature.properties.location;
+		layer.bindPopup(str,{offset:new L.Point(0,0)});
 
 	}
 }
@@ -59,7 +55,7 @@ function updateDataBar(marker){
 		</div><div class = "date"><h6>September 2013 - Today</h6></div> \
 		</div> ')
 		for(incident in details){
-			if(noFilter || details[incident].type == "Theft"){
+			if(noFilter || details[incident].type.indexOf("Theft") > -1 || details[incident].type.indexOf("Burglary") > -1 ){
 				incident_count++;
 				$("#data_bar").append(
 					'<div class="list-group"> \
@@ -99,11 +95,23 @@ L.geoJson(sites,
 				updateDataBar(marker)
 				currChecked = marker;
 			})
+            marker.on('mouseover', function(){
+				this.openPopup();
+			})
+            marker.on('mouseout', function (e) {
+                this.closePopup();
+            });
 			return marker;
 
 		},
-	//	onEachFeature: onEachFeature
+		onEachFeature: onEachFeature,
+    
+
 	}).addTo(map);
+
+$('#map').on('click', '.leaflet-popup-content-wrapper', function() {
+    alert('Hello from Toronto!');
+});
 
 	function getVals(){
 		// Get slider values
@@ -119,7 +127,33 @@ L.geoJson(sites,
 	}
 
 
+function loadRecent(){
+    $("#data_bar").append(' \
+		<div> \
+		<!-- Default panel contents --> \
+		<div class= "data-header"> \
+		<div id="data-header">'+' Recent Results </div>\
+		</div><div class = "date"><h6>January 2016 - Today</h6></div> \
+		</div> ')
+        console.log(recent)
+		for(var incident in recent['features']){
+                var properties = recent['features'][incident]['properties'];
+            $("#data_bar").append(
+					'<div class="list-group"> \
+					<div class = "hline"> </div> \
+					<div class="crime-instance"> \
+					<div class = "crimetitle">'
+					+properties['details'][0]['date']+
+					'</div> \
+					<div>'
+					+properties['details'][0]['type']+" <br>"+ properties['details'][0]['offense']+' at '+properties['location']+
+					'</div>\
+					</div>'
+				)
+		}
 
+    
+}
 
 	window.onload = function(){
 		// Initialize Sliders
@@ -134,4 +168,5 @@ L.geoJson(sites,
 				}
 			}
 		}
+        loadRecent();
 	}
