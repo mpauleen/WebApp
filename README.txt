@@ -11,6 +11,10 @@ Notes:
 -Implemented for Chrome Browser
 -Implemented with full-screen window size
 -Used checkboxes resources from csscheckbox.com
+-Map sourced from Leaflet.js
+-Some UI elements from Bootstrap
+-Uses jQuery
+-Data scraped from NUPD evanston blotter
 
 
 
